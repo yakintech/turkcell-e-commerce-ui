@@ -2,3 +2,9 @@ React Form Libraries
 https://www.react-hook-form.com/
 https://formik.org/
 
+
+
+React DataFetcing Libraries
+https://tanstack.com/query/latest
+https://swr.vercel.app/
+
