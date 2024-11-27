@@ -1,5 +1,7 @@
-import React from 'react'
-import { useForm, Resolver } from 'react-hook-form';
+import React, { useContext } from 'react'
+import { useForm } from 'react-hook-form';
+import authService from '../../../../api/authService';
+import { AuthContext, AuthContextType } from '../../../../context/AuthContext';
 
 
 type FormValues = {
@@ -12,9 +14,17 @@ function Login() {
 
     const { register, handleSubmit } = useForm<FormValues>()
 
+    const { login: adminLogin } = useContext(AuthContext) as AuthContextType
+
 
     const onSubmit = (data: FormValues) => {
-
+        authService.login(data.email, data.password)
+            .then(res => {
+                adminLogin()
+            })
+            .catch(err => {
+                alert('Login Failed')
+            })
     }
 
     return <>
