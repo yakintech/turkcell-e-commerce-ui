@@ -3,6 +3,7 @@ import { baseService } from '../../../../api/baseService'
 import { DataGrid } from '@mui/x-data-grid'
 import { Button } from '@mui/material'
 import { queryClient } from '../../../..'
+import { useNavigate } from 'react-router-dom'
 
 function List() {
 
@@ -33,7 +34,7 @@ function List() {
 
   const columns = [
     {
-      field: "id",
+      field: "_id",
       headerName: "ID",
       flex: 1
     },
@@ -62,12 +63,18 @@ function List() {
     }
   ]
 
+  const navigate = useNavigate()
+
   return <>
     <h1>Length: {data?.length}</h1>
+    <hr />
+    <Button onClick={() => navigate("/admin/products/add")}>Add New Product</Button>
+    <hr />
     <div style={{ height: 600, width: "100%" }}>
       <DataGrid
         rows={data}
         columns={columns}
+        getRowId={(row) => row._id}
       />
     </div>
   </>
