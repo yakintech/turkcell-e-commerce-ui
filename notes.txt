@@ -23,3 +23,6 @@ https://miro.medium.com/v2/resize:fit:1400/1*yYkitaR24SuFNXYyTxL1xA.gif
 Redux Dev Tools
 https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 
+Reduxt Thunk Basit Şema
+https://miro.medium.com/v2/resize:fit:1400/1*AyYYoeDMTTK_7J7aCeaIUA.gif
+
