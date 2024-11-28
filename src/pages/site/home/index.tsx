@@ -1,8 +1,8 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Container, Grid2, Card, CardContent, CardMedia, Button, IconButton, Stack, Box } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {Typography, Container, Grid2, Card, CardContent, CardMedia, Button, Box } from '@mui/material';
 import { useQuery } from '@tanstack/react-query';
 import { baseService } from '../../../api/baseService';
+import { useDispatch } from 'react-redux';
+import Header from '../../../components/layout-components/site/header';
 
 function Home() {
 
@@ -15,19 +15,11 @@ function Home() {
         staleTime: 20000
     })
 
+    let dispatch = useDispatch();
+
     return (
         <div>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="h6" style={{ flexGrow: 1 }}>
-                        E-Ticaret Sitesi
-                    </Typography>
-                    <Button color="inherit">Giriş</Button>
-                    <IconButton color="inherit">
-                        <ShoppingCartIcon />
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
+            <Header/>
             <Container>
                 <Typography variant="h4" gutterBottom>
                     Popüler Ürünler
@@ -52,7 +44,7 @@ function Home() {
                                             {item.unitPrice.toFixed(2)} TL
                                         </Typography>
                                     </CardContent>
-                                    <Button size="small" color="primary">
+                                    <Button onClick={() => dispatch({type:"cart/addToCart", payload:item})} size="small" color="primary">
                                         Sepete Ekle
                                     </Button>
                                 </Card>

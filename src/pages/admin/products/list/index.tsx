@@ -58,7 +58,7 @@ function List() {
       headerName: "Delete",
       flex: 1,
       renderCell: (params: any) => {
-        return <Button onClick={() => deleteProduct(params.row.id)} variant="contained" color="error">Delete</Button>
+        return <Button onClick={() => deleteProduct(params.row._id)} variant="contained" color="error">Delete</Button>
       }
     }
   ]
