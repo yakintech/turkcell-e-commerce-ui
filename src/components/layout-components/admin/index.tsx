@@ -5,12 +5,11 @@ import { Container } from '@mui/material'
 
 function DashboardLayout({ children }: any) {
     return <>
-        <Header />
         <Container>
+            <Header />
             {children}
+            <Footer />
         </Container>
-
-        <Footer />
     </>
 }
 
