@@ -5,7 +5,6 @@ import { baseService } from "../../../api/baseService";
 export const checkUserAuth = createAsyncThunk(
     "clientAuth/checkUserAuth",
     async () => {
-        console.log("checkUserAuth")
         const response = await baseService.getAll("client/check")
         return response;
     }
