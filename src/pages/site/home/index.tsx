@@ -19,7 +19,6 @@ function Home() {
 
     return (
         <div>
-            <Header/>
             <Container>
                 <Typography variant="h4" gutterBottom>
                     Popüler Ürünler

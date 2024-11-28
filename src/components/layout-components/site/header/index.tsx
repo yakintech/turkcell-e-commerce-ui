@@ -2,12 +2,15 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Button, IconButton, Badge, Stack } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Header() {
 
-    const { cartSlice } = useSelector((state: any) => state)
-    console.log("cartSlice", cartSlice)
+    const { cartSlice, clientAuthSlice } = useSelector((state: any) => state)
+    
+    const navigate = useNavigate()
+
+    console.log(clientAuthSlice)
 
     return <AppBar position="static">
         <Toolbar>
@@ -19,7 +22,9 @@ function Header() {
                     <Button style={{marginLeft:50}} color="inherit"><Link style={{color:"white"}} to={"/cart"}>Sepet</Link></Button>
                 </Stack>
                 <Stack direction={"row"}>
-                    <Button color="inherit">Giriş</Button>
+                    {
+                    clientAuthSlice.isClientAuthenticated ? <h2>{clientAuthSlice.clientEmail}</h2> : <Button color="inherit" onClick={() => navigate("/login")}>Giriş Yap</Button>
+                    }
                     <IconButton color="inherit">
                         <Badge badgeContent={cartSlice.cart.length} color="error">
                             <Link style={{color:"white"}} to={"/cart"}><ShoppingCartIcon /></Link>

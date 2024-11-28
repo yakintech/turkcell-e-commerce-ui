@@ -19,7 +19,6 @@ const Cart = () => {
 
     return (
         <>
-            <Header />
             <Container>
                 <Typography variant="h4" gutterBottom>
                     Sepetiniz
