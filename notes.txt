@@ -51,3 +51,5 @@ REACT_APP_API_URL=https://octopus-app-fa3jz.ondigitalocean.app/
 
 CROSS - ENV ( Env paket yönetimi)
 
+env-cmd paketi ile env yönetimini development ve production olarak ayırabilirsiniz.
+
