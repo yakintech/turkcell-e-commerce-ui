@@ -42,3 +42,7 @@ https://react.dev/reference/react/memo
 
 
 
+Ücretsiz Deploy Platformlar
+https://vercel.com/
+https://www.netlify.com/pricing/
+
