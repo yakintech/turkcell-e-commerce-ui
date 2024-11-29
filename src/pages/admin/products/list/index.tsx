@@ -72,6 +72,7 @@ function List() {
     <hr />
     <div style={{ height: 600, width: "100%" }}>
       <DataGrid
+    
         rows={data}
         columns={columns}
         getRowId={(row) => row._id}

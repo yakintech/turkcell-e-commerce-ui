@@ -26,3 +26,19 @@ https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkp
 Reduxt Thunk Basit Şema
 https://miro.medium.com/v2/resize:fit:1400/1*AyYYoeDMTTK_7J7aCeaIUA.gif
 
+React Error Handling
+https://www.npmjs.com/package/react-error-boundary
+
+
+React Multilanguage
+https://www.i18next.com/ ( Genel Multilanguage Paket)
+https://react.i18next.com/ 
+
+React Memorize
+https://react.dev/reference/react/memo
+* React.Memo fonksiyonu ile componentin kendisini memorize ediyorum
+* useMemo hook ile component içerisinde bir fonksiyonun DÖNÜŞÜNÜ memorize ediyorum
+* useCallback fonksiyonun referansını memorize ediyor! Fonksiyonun gereksiz yere yeniden tanımlanmasının önüne geçer
+
+
+
