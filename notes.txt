@@ -46,3 +46,8 @@ https://react.dev/reference/react/memo
 https://vercel.com/
 https://www.netlify.com/pricing/
 
+
+REACT_APP_API_URL=https://octopus-app-fa3jz.ondigitalocean.app/
+
+CROSS - ENV ( Env paket yönetimi)
+
